@@ -1,0 +1,63 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <base href="<%=basePath%>">
+##    <script type="text/javascript" src="scripts/jquery/jquery-1.6.2.min.js"></script>
+##    <script type="text/javascript" src="scripts/jquery/jquery.i18n.properties-min-1.0.9.js"></script>
+##    <script type="text/javascript" src="scripts/jquery/jquery.autocomplete.js"></script>
+##    <script  type="text/javascript" src="scripts/jquery/jquery.loadmask.js"></script>
+##    <script type="text/javascript" src="scripts/jquery/jquery.form.js"></script>
+##    <script type="text/javascript" src="scripts/jquery/jquery.timers.js"></script>
+    <title>jQuery i18n</title>
+##    <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"/>
+##    <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.js"/>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript">
+        $(document).ready(
+                function() {
+                    $("#sub").click(save)
+                });
+
+        /*function() {
+            $.ajax({
+                url : 'testt',
+                type : 'post',
+                data : {id:"6819"}, // Request body
+                contentType : 'application/json; charset=utf-8',
+                dataType : 'json',
+                success : function(response) {
+                    //请求成功
+                    alert("你好" + response.username);
+                },
+                error : function(msg) {
+                    alert("erro"+msg.username);
+                }
+            });
+        });*/
+        //               });
+        var save = function(){
+            $.ajax({
+                url: 'testt',
+                type: 'post',
+                async: true,
+                dataType: 'json',
+                data: {id:"6819"}
+            }).done(function(res) {
+                console.log(res);
+                alert(res.username)
+            });
+        }
+
+        $("sub").click(function(){
+            alert("111");
+        });
+    </script>
+</head>
+<body>
+##<input type="text" id="username"
+##       style="width: 100px; height: 30px; font-size: 20px; font-weight: bold;">
+<input type="button" id="sub" value="Go" style="height: 40px; height: 30px;">
+<div>username:::$!{username}</div>
+<br>
+</body>
+</html>
