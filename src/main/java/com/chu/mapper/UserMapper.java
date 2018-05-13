@@ -11,7 +11,6 @@ import java.util.List;
 
 @Mapper
 public interface UserMapper {
-    //添加第二行注释
 	@Select("SELECT * FROM USERS WHERE userNAME = #{name}")
     User findByName(@Param("name") String name);
 
