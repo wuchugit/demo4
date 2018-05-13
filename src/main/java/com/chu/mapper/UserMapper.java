@@ -11,6 +11,9 @@ import java.util.List;
 
 @Mapper
 public interface UserMapper {
+
+	//添加一行代码用于revert
+
 	@Select("SELECT * FROM USERS WHERE userNAME = #{name}")
     User findByName(@Param("name") String name);
 
