@@ -1,6 +1,5 @@
 add at feature/test0527
 <<<<<<< HEAD
 0527
-=======
-master
->>>>>>> master
+
+ 

@@ -37,5 +37,9 @@ public class Controoler {
         return up;
     }
 
+    public static void main(String[] args) {
+        System.out.println(1);
+        throw new MyException("1","chuchuchu");
+    }
 
 }
